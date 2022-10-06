@@ -20,7 +20,9 @@ function carregaElementos() {
 async function cepJson(cep) {
   
   try {
-    const dados = await axios(`https://viacep.com.br/ws/${cep}/json/`);
+    const url = `https://viacep.com.br/ws/${cep}/json/`
+    const dados = await axios(url);
+    console.log(dados);
     const json = await dados.data;
     resultado.innerHTML = `<p>CEP: ${json.cep}</p>`
     resultado.innerHTML += `<p>ESTADO: ${json.uf}</p>`
