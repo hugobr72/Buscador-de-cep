@@ -16,7 +16,6 @@ function carregaElementos() {
   });
 }
 
-
 async function cepJson(cep) {
   
   try {
@@ -41,7 +40,5 @@ function cepInvalido() {
   input.value = ''
   resultado.innerHTML = 'Digite um cep válido';
 }
-
-
 
 carregaElementos()
